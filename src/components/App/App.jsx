@@ -35,12 +35,12 @@ export const App = () => {
       setImages(prev => (page > 1 ? [...prev, ...hits] : hits));
       setLoading(false);
     }
-    if (search && page === 1) {
+    if (search) {
       loadImages();
     }
-    if (page > 1) {
-      loadImages();
-    }
+    // if (page > 1) {
+    //   loadImages();
+    // }
     if (search === '' && isSearch) {
       Notify.warning('Please entered a text');
     }
